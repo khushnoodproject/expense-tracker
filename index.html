@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Expense Tracker Lite</title>
+  <meta name="description" content="Personal expense tracker">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Expenses">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icons/favicon-64.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Full-screen overlays: first-run setup and PIN lock -->
+  <div id="overlay" class="overlay" hidden></div>
+
+  <header class="top" id="top" hidden>
+    <div class="brand">
+      <img src="icons/logo.png" alt="" width="40" height="40" class="logo">
+      <div>
+        <div class="hello" id="hello">Hello, Khushnood</div>
+        <div class="sync" id="sync">Ready</div>
+      </div>
+    </div>
+    <div class="month" id="monthBar">
+      <button id="prevM" aria-label="Previous month">‹</button>
+      <span id="monthLabel"></span>
+      <button id="nextM" aria-label="Next month">›</button>
+    </div>
+  </header>
+
+  <main id="view" aria-live="polite"></main>
+
+  <nav class="tabs" id="tabs" hidden>
+    <button data-tab="home" class="on"><span>🏠</span>Home</button>
+    <button data-tab="add"><span>＋</span>Add</button>
+    <button data-tab="history"><span>🧾</span>History</button>
+    <button data-tab="settings"><span>⚙️</span>Settings</button>
+  </nav>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
